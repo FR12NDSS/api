@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เลือกค่ายเกม</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+    }
+    .providers {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .provider {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .provider:hover {
+      transform: scale(1.05);
+    }
+    .provider img {
+      max-width: 80px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>เลือกค่ายเกมที่คุณต้องการเล่น</h1>
+  <div class="providers">
+    <div class="provider" onclick="selectProvider('PGSoft')">
+      <img src="/images/providers/pgsoft.png" alt="PGSoft" />
+      PG Soft
+    </div>
+    <div class="provider" onclick="selectProvider('Pragmatic')">
+      <img src="/images/providers/pragmatic.png" alt="Pragmatic Play" />
+      Pragmatic Play
+    </div>
+    <div class="provider" onclick="selectProvider('Joker')">
+      <img src="/images/providers/joker.png" alt="Joker Gaming" />
+      Joker Gaming
+    </div>
+    <div class="provider" onclick="selectProvider('Spadegaming')">
+      <img src="/images/providers/spadegaming.png" alt="Spadegaming" />
+      Spadegaming
+    </div>
+    <div class="provider" onclick="selectProvider('Evoplay')">
+      <img src="/images/providers/evoplay.png" alt="Evoplay" />
+      Evoplay
+    </div>
+    <div class="provider" onclick="selectProvider('NetEnt')">
+      <img src="/images/providers/netent.png" alt="NetEnt" />
+      NetEnt
+    </div>
+  </div>
+
+  <script>
+    function selectProvider(name) {
+      window.location.href = `/games/provider/${name.toLowerCase()}`;
+    }
+  </script>
+</body>
+</html>
